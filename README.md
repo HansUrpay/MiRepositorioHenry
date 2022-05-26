@@ -1,2 +1,3 @@
 # MiRepositorioHenry
-Repositorio para practicar desde cero 
+Repositorio para practicar desde cero.
+Practicando, editando texto desde GitBash.
