@@ -12,3 +12,5 @@ if (num < B){
 function Suma (num,C){
 return (num + C)
 }
+
+function Resta()
