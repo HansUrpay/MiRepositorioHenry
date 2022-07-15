@@ -1,4 +1,5 @@
-/* 1.- Tienes que buscar todos los números desde el 1 inclusive hasta el número x dado, que tengan el dígito d dado.
+/* 1.- Tienes que buscar todos los números desde el 1 inclusive hasta el número
+x dado, que tengan el dígito d dado.
 El valor de d siempre será 0 - 9.
 El valor de x siempre será mayor que 0.
 Tienes que volver como una matriz la cuenta de estos números,
@@ -46,4 +47,25 @@ function capitalizeWord(word) {
      first+=word[i];
    }
    return first;
+}
+
+/* 3.- Dada una matriz de enteros.
+Devuelve una matriz, donde el primer elemento es el recuento de números positivos y el segundo elemento es la suma de números negativos. 0 no es ni positivo ni negativo.
+Si la entrada es una matriz vacía o es nula, devuelve una matriz vacía.*/
+function cuentaNumeros(array){
+  let suma=0;
+  let totalNegativos=0;
+  let array1=[];
+  for (let i=0; i<array.length; i++){
+    if(array[i]>0){
+      suma+=1;
+    } else if(array[i]<0){
+      totalNegativos+=array[i];
+    }
+  }
+  array1.push(suma, totalNegativos);
+	if (array.length===0){
+    return array;
+  } 
+  return array1;
 }
