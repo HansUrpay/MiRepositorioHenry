@@ -50,22 +50,34 @@ function capitalizeWord(word) {
 }
 
 /* 3.- Dada una matriz de enteros.
-Devuelve una matriz, donde el primer elemento es el recuento de números positivos y el segundo elemento es la suma de números negativos. 0 no es ni positivo ni negativo.
+Devuelve una matriz, donde el primer elemento es el recuento de números positivos 
+y el segundo elemento es la suma de números negativos. 0 no es ni positivo ni negativo.
 Si la entrada es una matriz vacía o es nula, devuelve una matriz vacía.*/
 function cuentaNumeros(array){
-  let suma=0;
-  let totalNegativos=0;
+  let cuentaPositivos=0;
+  let sumaNegativos=0;
   let array1=[];
   for (let i=0; i<array.length; i++){
     if(array[i]>0){
-      suma+=1;
+      cuentaPositivos+=1;
     } else if(array[i]<0){
-      totalNegativos+=array[i];
+      sumaNegativos+=array[i];
     }
   }
-  array1.push(suma, totalNegativos);
+  array1.push(cuentaPositivos, sumaNegativos);
 	if (array.length===0){
     return array;
   } 
   return array1;
+}
+
+/* 4.- String Invertida: realiza una funcion que retorne el argumento 'string'
+ingresado de forma inversa.
+Ej: "hola" --> "aloh" */
+function reverse(string){
+  let stringInvertida="";
+  for(let i=string.length-1; i>=0; --i){
+    stringInvertida+=string[i];
+  }
+  return stringInvertida;
 }
